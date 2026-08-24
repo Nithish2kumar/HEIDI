@@ -6,7 +6,7 @@ def decode(inI):
 
     for pix in image.getdata():
         for val in pix:
-            bin+=str(val&1)#values in picture RGBRGB...
+            bin+=str(val&1)#Gives the last bit what we inserted on encrytpion
     msg=""
 
     for i in range(0, len(bin),8):
@@ -20,7 +20,7 @@ def decode(inI):
         if msg.endswith("<<<END>>>"):
             return msg[:-9]
 
-        return msg
+    return msg
 
 
 message=decode("../samples/out.jpeg")
