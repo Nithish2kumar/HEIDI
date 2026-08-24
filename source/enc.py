@@ -30,4 +30,4 @@ def encode(inI,outI,msg):
     image.save(outI)
     print("Successfully hidden")
 
-encode("../samples/DP.jpeg","../samples/out.jpeg","Hello NK")
+encode("../samples/DP.jpeg","../samples/out.png","Hello NK")
