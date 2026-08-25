@@ -23,6 +23,4 @@ def decode(inI):
     return msg
 
 
-message=decode("../samples/out.png")
-print("Hidden Message is: ",message)
 
