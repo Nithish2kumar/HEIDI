@@ -22,6 +22,9 @@ HEIDI/
 ├── requirements.txt
 └── README.md
 ```
+## 🖼️ Output screenshot
+<img width="1455" height="560" alt="2026_08_25_18_28_45_screenshot" src="https://github.com/user-attachments/assets/9eda274b-6fd8-4327-a7f5-633234d7008d" />
+
 
 ## 🚀 Usage
 
