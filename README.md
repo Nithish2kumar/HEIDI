@@ -17,6 +17,7 @@ HEIDI/
 ├── src/
 │   ├── encoder.py
 │   └── decoder.py
+|   └── main.py
 ├── samples/
 ├── requirements.txt
 └── README.md
@@ -28,18 +29,13 @@ Install the dependency:
 
 ```bash
 pip install pillow
+pip install rich 
 ```
 
 Encode a message:
 
 ```bash
-python src/encoder.py
-```
-
-Decode the hidden message:
-
-```bash
-python src/decoder.py
+sudo python src/main.py
 ```
 
 ## 🔐 How It Works
