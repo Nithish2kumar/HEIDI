@@ -11,23 +11,31 @@ print(f"listening on {host}:{port}")
 
 prev=None
 bits=""
+started=False
 
 while True:
     data, address = sock.recvfrom(1024)
-
     current_time = time.monotonic()
-    if prev is not None:
-        delay=current_time-prev
 
-        if delay > 0.15:
-            bits+="1"
-        else:
-            bits+="0"
-
-    prev=current_time
+    if data==b"START":
+        started=True
+        continue
 
     if data==b"END":
         break
+
+    if data==b"DATA" and started:
+        if prev is not None:
+            delay=current_time-prev
+
+            if delay > 0.15:
+                bits+="1"
+            else:
+                bits+="0"
+
+        prev=current_time
+
+        
 
 print(f"Received bits:{bits}")
 
