@@ -14,10 +14,13 @@ A simple Python project for **hiding and extracting secret messages inside image
 
 ```text
 HEIDI/
-├── src/
+├── image stego/
 │   ├── encoder.py
 │   └── decoder.py
 |   └── main.py
+├── network stego/
+|   ├──receiver.py
+|   └──sender.py  
 ├── samples/
 ├── requirements.txt
 └── README.md
@@ -35,13 +38,22 @@ pip install pillow
 pip install rich 
 ```
 
-Encode a message:
+Encode/Decode a message on Image:
 
 ```bash
-sudo python src/main.py
+sudo python3 image\ steg/main.py 
+```
+
+Send/Receive message on Network:
+
+```bash
+sudo python3 network\ steg/receiver.py
+sudo python3 network\ steg/sender.py
 ```
 
 ## 🔐 How It Works
+
+Image:
 
 ```text
 Secret Message
@@ -52,6 +64,27 @@ Image Pixel LSBs
       ↓
   Stego Image
 ```
+
+Network:
+
+'''
+Secret Message
+      ↓
+    Binary
+      ↓
+Packet Timing
+      ↓
+  Network Traffic
+      ↓
+Receiver
+      ↓
+Extract Timing
+      ↓
+    Binary
+      ↓
+Secret Message
+'''
+
 
 The secret message is stored by modifying the **least significant bits of image pixel values**, causing minimal visible changes.
 
