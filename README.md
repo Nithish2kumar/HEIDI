@@ -67,22 +67,21 @@ Image Pixel LSBs
 
 Network:
 
-'''
-Secret Message
+'''Secret Message
       ↓
     Binary
       ↓
-Packet Timing
+ Packet Timing
       ↓
   Network Traffic
       ↓
-Receiver
+ Receiver
       ↓
-Extract Timing
+ Extract Timing
       ↓
     Binary
       ↓
-Secret Message
+ Secret Message
 '''
 
 
