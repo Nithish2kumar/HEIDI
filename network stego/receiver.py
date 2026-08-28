@@ -31,6 +31,8 @@ while True:
 
 print(f"Received bits:{bits}")
 
+message=""
+
 for i in range(0, len(bits), 8):
     byte = bits[i:i + 8]
 
