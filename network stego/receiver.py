@@ -21,17 +21,20 @@ while True:
         started=True
         continue
 
+    if data==b"SYNC" and started:
+        prev=current_time
+        continue
+
     if data==b"END":
         break
 
     if data==b"DATA" and started:
-        if prev is not None:
-            delay=current_time-prev
+        delay=current_time-prev
 
-            if delay > 0.15:
-                bits+="1"
-            else:
-                bits+="0"
+        if delay > 0.15:
+            bits+="1"
+        else:
+            bits+="0"
 
         prev=current_time
 

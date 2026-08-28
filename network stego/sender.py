@@ -20,6 +20,8 @@ def sendMsg(msg):
     sock.sendto(b"START",(host,port))
     time.sleep(0.5)
 
+    sock.sendto(b"SYNC", (host, port))
+    
     for bit in bin:
         if bit=="0":
             delay=shortD
