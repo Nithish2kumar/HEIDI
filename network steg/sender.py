@@ -36,6 +36,3 @@ def sendMsg(msg):
     sock.close()
 
     print("Message sent successfully")
-
-mes=input("Enter message: ")
-sendMsg(mes)
