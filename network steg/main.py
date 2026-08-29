@@ -37,7 +37,7 @@ def main():
 
                 con.print(
                     Panel(
-                        f"[green]Message received successfully/green]\n"
+                        f"[green]Message received successfully[/green]\n"
                         f"Output: [cyan]{mes}[/cyan]",
                         title="✅ Success",
                         border_style="green"
